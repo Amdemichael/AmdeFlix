@@ -1,19 +1,8 @@
-<div class="banner">
+<div class="banner container" *ngIf="shows">
+  <h1>{{ title }}</h1>
   <div class="grid">
-    <div class="col-2">
-      <a class="show-item">
-        <div class="show-item-rating">
-          <i class="pi pi-star"></i>
-          <span>8.8/10</span>
-        </div>
-        <div class="show-item-image">
-          <img
-            src="https://image.tmdb.org/t/p/w1280/pWsD91G2R1Da3AKM3ymr3UoIfRb.jpg"
-            alt=""
-          />
-        </div>
-        <div class="show-item-title">any movie title</div>
-      </a>
+    <div class="col-2" *ngFor="let show of shows">
+      <app-show-item [showItem]="show"></app-show-item>
     </div>
   </div>
 </div>
