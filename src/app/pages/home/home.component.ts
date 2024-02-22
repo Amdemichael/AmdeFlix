@@ -7,7 +7,7 @@ import { MoviesService } from 'src/app/services/movies.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  upcomingMovies$ = this.moviesService.getMoviesByType('upcoming');
-  topRatedMovies$ = this.moviesService.getMoviesByType('top_rated');
+  upcomingMovies$ = this.moviesService.getMoviesByType('upcoming', 12);
+  topRatedMovies$ = this.moviesService.getMoviesByType('top_rated', 12);
   constructor(private moviesService: MoviesService) {}
 }
