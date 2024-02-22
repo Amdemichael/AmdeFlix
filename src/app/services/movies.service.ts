@@ -10,21 +10,9 @@ export class MoviesService {
   private apiKey = '52e3200582daea5c719f691e2e943b30';
   constructor(private http: HttpClient) {}
 
-  getPopularMovies() {
+  getMoviesByType(type: string) {
     return this.http.get<MovieDto>(
-      `${this.apiUrl}/movie/popular?api_key=${this.apiKey}`
-    );
-  }
-
-  getUpcomingMovies() {
-    return this.http.get<MovieDto>(
-      `${this.apiUrl}/movie/upcoming?api_key=${this.apiKey}`
-    );
-  }
-
-  getTopRatedMovies() {
-    return this.http.get<MovieDto>(
-      `${this.apiUrl}/movie/top_rated?api_key=${this.apiKey}`
+      `${this.apiUrl}/movie/${type}?api_key=${this.apiKey}`
     );
   }
 }

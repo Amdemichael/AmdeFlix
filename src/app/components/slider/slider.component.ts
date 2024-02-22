@@ -24,7 +24,7 @@ export class SliderComponent implements OnInit {
   imageBaseUrl = imageBaseUrl;
   constructor(private popularMovies: MoviesService) {}
 
-  movies$ = this.popularMovies.getPopularMovies();
+  movies$ = this.popularMovies.getMoviesByType('popular');
 
   slideIndex = 0;
 
