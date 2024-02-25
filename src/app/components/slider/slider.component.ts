@@ -5,9 +5,9 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
-import { MoviesService } from 'src/app/services/movies.service';
+import { Component, Input, OnInit } from '@angular/core';
 import { imageBaseUrl } from 'src/app/constants/images-size';
+import { Movie } from 'src/app/models/movie';
 
 @Component({
   selector: 'app-slider',
@@ -21,15 +21,17 @@ import { imageBaseUrl } from 'src/app/constants/images-size';
   ],
 })
 export class SliderComponent implements OnInit {
+  @Input() slides: Movie[] = [];
+  @Input() isHeader = false;
   imageBaseUrl = imageBaseUrl;
-  constructor(private popularMovies: MoviesService) {}
-
-  movies$ = this.popularMovies.getMoviesByType('popular');
+  constructor() {}
 
   slideIndex = 0;
 
   ngOnInit() {
-    this.changeSlide();
+    if (!this.isHeader) {
+      this.changeSlide();
+    }
   }
 
   changeSlide() {

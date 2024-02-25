@@ -3,6 +3,8 @@
 @import "../node_modules/modern-normalize/modern-normalize.css";
 @import "../node_modules/primeflex/primeflex.css";
 @import "primeicons/primeicons.css";
+@import "primeng/resources/themes/md-dark-indigo/theme.css";
+@import "primeng/resources/primeng.css";
 
 body {
   font-family: "Roboto", sans-serif;
@@ -10,6 +12,10 @@ body {
   font-size: 14px;
   color: white;
   background-color: #141414;
+}
+a {
+  color: white;
+  text-decoration: none;
 }
 
 h1 {
