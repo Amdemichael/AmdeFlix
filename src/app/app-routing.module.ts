@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { MovieListComponent } from './pages/movie-list/movie-list.component';
 import { ShowDetailsComponent } from './pages/show-details/show-details.component';
+import { ShowListComponent } from './pages/show-list/show-list.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'movie-list', component: MovieListComponent },
+  { path: 'list', component: ShowListComponent },
   { path: 'details/:id', component: ShowDetailsComponent },
 ];
 
