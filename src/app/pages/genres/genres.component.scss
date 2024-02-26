@@ -1,0 +1,12 @@
+@import "../../styles/colors";
+.genres-links {
+  a {
+    padding: 5px;
+    background-color: $primary-color;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 1.6rem;
+  }
+}
